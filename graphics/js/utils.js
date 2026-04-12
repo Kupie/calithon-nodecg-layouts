@@ -115,27 +115,18 @@ function getNamesForRun(runData) {
 
 // Easy access to create member data object used above.
 function createPlayerData(player) {
-	// Gets username from URL.
 	let twitchUsername = '';
 	if (player.social && player.social.twitch) {
 		twitchUsername = player.social.twitch;
 	}
 
-	// Parse pronouns from the runner name, if they're present.
-	let name = player.name.split('-');
-	let pronouns = '';
-	if (name.length > 1) {
-		pronouns = name[1].trim();
-	}
-	name = name[0].trim();
-
 	return {
 		id: player.id,
 		teamID: player.teamID,
-		name: name,
-		pronouns: pronouns,
+		name: player.name,
+		pronouns: player.pronouns || '',
 		twitch: twitchUsername,
-		region: player.region
+		country: player.country
 	};
 }
 

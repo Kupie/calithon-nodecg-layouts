@@ -8,7 +8,7 @@
   "nodecg": {
     "compatibleRange": "^1.6.0",
     "dependencies": [
-      "speedcontrol/nodecg-speedcontrol:>=2.0"
+      "speedcontrol/nodecg-speedcontrol:>=2.3"
     ],
     "dashboardPanels": [
       {

@@ -94,11 +94,8 @@ $(() => {
 				for (let player of team.players) {
 					fadeText('#runner-name' + (i + 1), player.name, true);
 
-					// Set pronouns
-					const pronoun = pronouns[player.name];
-					if (pronoun) {
-						$('#pronouns' + (i + 1)).text(pronoun);
-					}
+					// Set pronouns from speedcontrol player data
+					$('#pronouns' + (i + 1)).text(player.pronouns || '');
 
 					$('#runner-details' + (i + 1)).data('teamID', player.teamID);
 					i += 1;
